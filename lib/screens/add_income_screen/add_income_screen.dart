@@ -93,7 +93,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
                   ),
                   const SizedBox(width: 16),
                   Text(
-                    'ДОБАВИТЬ ДОХОД',
+                    'ADD PROFIT',
                     style: context.textTheme.displayMedium
                         ?.copyWith(color: const Color.fromARGB(255, 0, 0, 0)),
                   ),
@@ -104,7 +104,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
                 controller: _summController,
                 focusNode: _summFocusNode,
                 autofocus: true,
-                hintText: 'Сумма дохода',
+                hintText: 'Value',
                 keyboardType: TextInputType.number,
                 inputFormatters: [
                   FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
@@ -114,19 +114,19 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
               AddIncomeTextField(
                 controller: _descController,
                 focusNode: _descFocusNode,
-                hintText: 'Описание',
+                hintText: 'Description',
               ),
               const SizedBox(height: 20),
               AddIncomeTextField(
                 controller: d1,
                 focusNode: _d1,
-                hintText: 'Ежемесячные начисления',
+                hintText: 'Monthly add',
               ),
               const SizedBox(height: 20),
               AddIncomeTextField(
                 controller: d2,
                 focusNode: _d2,
-                hintText: 'Процентная ставка',
+                hintText: 'Percent per month',
               ),
             ],
           ),
@@ -135,7 +135,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
       floatingActionButton: AddIncomeButton(
         buttonEnabledNotifier: buttonEnabledNotifier,
         onTap: _onAddIncomeTap,
-        title: widget.income == null ? 'Добавить доход' : 'Редактировать',
+        title: widget.income == null ? 'Add profit' : 'Edit',
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
